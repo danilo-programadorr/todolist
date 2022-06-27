@@ -107,27 +107,29 @@ body {
   flex-direction: column;
   gap: 15px;
 
-  .trash {
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    right: 60px;
-    bottom: 55px;
-    background-image: url(../img/trash.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-  .edit {
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    right: 120px;
-    bottom: 55px;
-    background-image: url(../img/edit.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
   .todo-item {
+    .trash {
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      right: 20px;
+      bottom: 40px;
+      background-image: url(../img/trash.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
+    .edit {
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      right: 70px;
+      bottom: 40px;
+      background-image: url(../img/edit.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
     position: relative;
     padding: 10px 0;
 
