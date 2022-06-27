@@ -7,6 +7,7 @@ $white: #fff;
 $light-salmon: #DCDADA;
 $red: #BC0808;
 $limon :#70FE76;
+
 * {
   padding: 0;
   margin: 0;
@@ -19,67 +20,154 @@ body {
 }
 
 #container {
+  display: flex;
+  width: 50vw;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  gap: 15px;
   position: relative;
-  .img {
-    width: 60vw;
-    height: 350px;
-    position: relative;
-    top: -170px;
-    left: 275px;
-    background-image: url(../img/grup-circo.svg);
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
 
-  .title {
-    width: 17.75rem;
-    margin: 0 auto;
-    position: relative;
-    top:-320px;
-    background: linear-gradient(90deg,#3b8199,#236d85);
-    text-transform: uppercase;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 3.2rem;
+  // border: 1px solid rgb(142, 20, 20);
+}
+
+.img {
+  width: 50vw;
+  height: 350px;
+  position: absolute;
+  top: -170px;
+  background-image: url(../img/grup-circo.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 0.7;
+}
+
+.title {
+  width: 17.75rem;
+  margin: 0 auto;
+  position: relative;
+  top: 10px;
+  background: linear-gradient(90deg, #428da5, #09303d);
+  text-transform: uppercase;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.todo-form {
+  position: relative;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0.5rem;
+
+  .input-form {
+    width: 37.5rem;
+    height: 35px;
+    border-radius: 7px;
+    padding-left: 10px;
+    border: 0;
+    outline: 0;
+    background-color: $medium-dark-blue;
+    margin: 1rem;
     font-weight: 700;
   }
-  .todo-form {
+
+  .btn {
     display: flex;
     justify-content: center;
-    position: relative;
-    top: -190px;
-    
-    input:nth-child(1) {
-      width: 37.5rem;
-      height: 35px;
-      position: absolute;
-      top: -50px;
-    }
-    input:nth-child(2) {
-      width: 37.5rem;
-      height: 35px;
-    }
-    .input-form {
-      border-radius: 7px;
-      padding-left: 10px;
-      border:none;
-      outline: 0;
-    }
   }
+
   button {
-    width: 12.5rem;
+    width: 12rem;
     height: 70px;
     position: absolute;
-    top: 60px;
-    right: 36.80rem;
+    top: 65%;
     border-radius: 20px;
     cursor: pointer;
     background-color: $medium-dark-blue;
     color: $black;
-    outline: 0;
     border: none;
     font-weight: 600;
+    font-size: 1.5rem;
     box-shadow: 4px 6px 15px rgba(254, 250, 250, 0.05);
-  
+    transition: 0.5s;
+
+    &:hover {
+      background-color: #698994;
+    }
+  }
+}
+
+
+.todo-list {
+  display: flex;
+  width: 36.5rem;
+  flex-direction: column;
+  gap: 15px;
+
+  .trash {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 60px;
+    bottom: 55px;
+    background-image: url(../img/trash.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .edit {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 120px;
+    bottom: 55px;
+    background-image: url(../img/edit.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .todo-item {
+    position: relative;
+    padding: 10px 0;
+
+    // background-image: url(../img/trash.svg);
+    // // background-image: url(../img/edit.svg);
+    // background-size: contain;
+    // background-repeat: no-repeat;
+
+    input[type='checkbox'] {
+      width: 18px;
+      height: 18px;
+      margin-left: 3px;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .content-tarefa {
+      position: absolute;
+      left: 35px;
+      color: $light-blue;
+
+    }
+
+    .description {
+      color: $medium-dark-blue;
+    }
+
+    input[type='checkbox']:checked+label {
+      text-decoration: line-through;
+      color: $Grey;
+      transition: .3s;
+      transition-duration: .5s;
+    }
+
+    .line {
+      width: 100%;
+      height: 1px;
+      background-color: $Grey;
+      border-radius: 4px;
+      margin: 3px 0;
+    }
   }
 }

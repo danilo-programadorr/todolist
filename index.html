@@ -1,21 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/style.css">
     <title>todo-list</title>
 </head>
+
 <body>
     <main id="container">
-        <div class="img"> </div>
+         <div class="img"> </div>
         <div class="title"> Todo List</div>
-     <div class="todo-form">
-        <input class="input-form" type="text" placeholder="Digite sua Tarefa">
-        <input class="input-form" type="text" placeholder="Descrição">
-        <button type="button" class="btn">Adicionar</button>
-    </div>
+        <div class="todo-form">
+            <input class="input-form" type="text" placeholder="Digite sua Tarefa">
+            <input class="input-form" type="text" placeholder="Descrição">
+            <div class="btn"><button type="button" >Adicionar</button></div>  
+        </div><br>
+
+        <div class="todo-list">
+            <div class="trash"></div>
+            <div class="edit"></div>
+            <div class="todo-item">
+                <input type="checkbox" class="input">
+                <label class="content-tarefa" for="input">tarefa</label><br>
+                <div class="line"></div>
+                <label class="description" for="input">descrição</label>
+            </div>
+        </div> 
+
+        <div class="footer">
+            <div class="icon-share"></div>
+            <div class="icon-trash"></div>
+        </div>
     </main>
     <script src="/assets/js/app.js"></script>
 </body>
+
 </html>
