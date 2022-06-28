@@ -64,7 +64,7 @@ body {
 
   .input-form {
     width: 37.5rem;
-    height: 35px;
+    height: 40px;
     border-radius: 7px;
     padding-left: 10px;
     border: 0;
@@ -72,6 +72,9 @@ body {
     background-color: $medium-dark-blue;
     margin: 1rem;
     font-weight: 700;
+  }
+  .input-form::placeholder {
+    color: #383838;
   }
 
   .btn {
@@ -83,7 +86,7 @@ body {
     width: 12rem;
     height: 70px;
     position: absolute;
-    top: 65%;
+    top: 70%;
     border-radius: 20px;
     cursor: pointer;
     background-color: $medium-dark-blue;
@@ -108,6 +111,8 @@ body {
   gap: 15px;
 
   .todo-item {
+    position: relative;
+    padding: 10px 0;
     .trash {
       width: 25px;
       height: 25px;
@@ -130,13 +135,6 @@ body {
       background-repeat: no-repeat;
       cursor: pointer;
     }
-    position: relative;
-    padding: 10px 0;
-
-    // background-image: url(../img/trash.svg);
-    // // background-image: url(../img/edit.svg);
-    // background-size: contain;
-    // background-repeat: no-repeat;
 
     input[type='checkbox'] {
       width: 18px;
@@ -171,5 +169,33 @@ body {
       border-radius: 4px;
       margin: 3px 0;
     }
+  }
+}
+
+.footer {
+  width: 36.5rem;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #7499a5;
+  border-radius: 5px;
+ 
+  .icon-share {
+    background-image: url(../img/share.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
+  .icon-trash {
+    background-image: url(../img/trash-2.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
   }
 }
