@@ -60,8 +60,8 @@ body {
   height: 220px;
   display: flex;
   flex-direction: column;
-  margin: 0 0.5rem;
-
+  margin: 2rem 0.5rem;
+  // border: 1px solid red;
   .input-form {
     width: 37.5rem;
     height: 40px;
@@ -118,7 +118,7 @@ body {
       height: 25px;
       position: absolute;
       right: 20px;
-      bottom: 40px;
+      bottom: 25px;
       background-image: url(../img/trash.svg);
       background-size: contain;
       background-repeat: no-repeat;
@@ -129,7 +129,7 @@ body {
       height: 25px;
       position: absolute;
       right: 70px;
-      bottom: 40px;
+      bottom: 25px;
       background-image: url(../img/edit.svg);
       background-size: contain;
       background-repeat: no-repeat;
